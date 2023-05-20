@@ -1,0 +1,275 @@
+body {
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    --cor-bg-gallows: #8E4008;
+    --cor-bg-person: #bf852d;
+}
+
+#score{
+    display: flex; 
+    gap: 0.5rem;
+}
+
+#scoreSeparator{
+    align-self: center;
+}
+#scoreSeparator h2{
+    text-align: center;
+}
+
+#numWin h2{
+    color: green;
+}
+#numLose h2{
+    color: red;
+}
+
+#containerGallows {
+    display: flex;
+    align-items: center;
+
+    padding-top: 1rem;
+    min-height: 8rem;
+    min-width: 8rem;
+}
+
+#gallowsY {
+    background-color: var(--cor-bg-gallows);
+    min-height: 8rem;
+    min-width: 1.2rem;
+
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+}
+
+#gallowsX {
+    background-color: var(--cor-bg-gallows);
+    min-height: 1.2rem;
+    min-width: 4rem;
+
+    position: relative;
+    bottom: 4rem;
+    right: 1.2rem;
+}
+
+#rope {
+    background-color: var(--cor-bg-gallows);
+    min-height: 1rem;
+    min-width: 0.2rem;
+
+    position: relative;
+    bottom: 2.9rem;
+    right: 1.5rem;
+}
+
+#head {
+    background-color: transparent;
+    min-height: 1.8rem;
+    min-width: 1.8rem;
+    border: solid 0.2rem var(--cor-bg-person);
+    border-radius: 1.8rem;
+
+    position: relative;
+    bottom: 1.3rem;
+    right: 2.8rem;
+}
+
+#body {
+    background-color: var(--cor-bg-person);
+    min-height: 3.5rem;
+    min-width: 0.2rem;
+
+    position: relative;
+    top: 1.5rem;
+    right: 4.1rem;
+}
+
+#armRight {
+    background-color: var(--cor-bg-person);
+    min-height: 1.5rem;
+    min-width: 0.2rem;
+    transform: rotate(-45deg);
+
+
+    position: relative;
+    top: 0.7rem;
+    right: 3.8rem;
+}
+
+#armLeft {
+    background-color: var(--cor-bg-person);
+    min-height: 1.5rem;
+    min-width: 0.2rem;
+    transform: rotate(45deg);
+
+
+    position: relative;
+    top: 0.7rem;
+    right: 5rem;
+}
+
+#footRight {
+    background-color: var(--cor-bg-person);
+    min-height: 1rem;
+    min-width: 0.2rem;
+    transform: rotate(-45deg);
+
+    position: relative;
+    top: 3.4rem;
+    right: 4.4rem;
+}
+
+#footLeft {
+    background-color: var(--cor-bg-person);
+    min-height: 1rem;
+    min-width: 0.2rem;
+    transform: rotate(45deg);
+
+
+    position: relative;
+    top: 3.4rem;
+    right: 5.2rem;
+}
+
+#containerKeyWord {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem;
+    max-width: 80%;
+}
+
+#containerKeyWord h1 {
+    letter-spacing: 0.5rem;
+}
+
+#keyboard {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    justify-items: center;
+    gap: 0.5rem;
+}
+
+.keyboardLetter {
+    font-size: 2rem;
+}
+
+.keyboardKey {
+    background: white;
+    border: 1px solid #F5F5F5;
+}
+
+.keyboardKey,
+.right,
+.wrong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 2px;
+    box-shadow: 0.5px 0.5px grey;
+}
+
+.keyboardKey:hover {
+    cursor: pointer;
+}
+
+.keyboardLetter {
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.right {
+    background: rgb(74, 224, 122);
+    border: 1px solid rgb(74, 224, 122);
+}
+
+.right:hover,
+.wrong :hover {
+    cursor: no-drop;
+}
+
+.wrong {
+    background: rgba(233, 83, 70, 0.923);
+    border: 1px solid rgb(233, 83, 70, 0.923);
+}
+
+button:disabled {
+    color: black;
+}
+
+#containerToast {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    background: rgb(229, 234, 229);
+    border-radius: 0.2rem;
+
+    width: 13rem;
+    height: 4rem;
+
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    z-index: 3;
+    bottom: 28rem;
+}
+
+#toastBody {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.2rem;
+}
+
+#toastBody h1 {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+}
+
+#toastTime {
+    min-height: 0.35rem;
+    align-self: flex-end;
+    min-width: 0%;
+}
+
+.win {
+    background: rgb(7, 197, 14);
+}
+
+.lose {
+    background: rgb(227, 62, 50);
+}
+
+.effectHead{
+    -webkit-transform: translate(40%, 50%);
+    -ms-transform: translate(40%, 50%);
+    transition-duration: 5s;
+    transform: translate(40%, 50%);
+}
+
+.effectRope{
+    -webkit-transform: scaleY(4);
+    -ms-transform: scaleY(4);
+    transition-duration: 4.5s;
+    transform: scaleY(4);
+}
+
+@media (max-width: 450px) {
+    #keyboard {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 0.2rem;
+    }
+}
+
+
+  
