@@ -1,7 +1,4 @@
 # Jogo da Forca
-Para jogar o jogo [clique aqui](https://nataliaramalho.github.io/JogoForca/)
-
-![Gif-Jogo](https://github.com/NataliaRamalho/JogoForca/blob/main/assets/Gif.gif)
 
 # Tecnologias utilizadas
 - HTML
@@ -16,7 +13,7 @@ Caso tenho o <a href="https://git-scm.com/downloads" >git </a> instalado, digite
 Se não tiver, faça o download do repositório e descompacte o arquivo.
 
 `````
-git clone https://github.com/NataliaRamalho/JogoForca.git
+git clone https://mkxit777.github.io/Portif-lio/JogoForca-main/jogo.html
 `````
 
 - Abra o arquivo index.html   
